@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using static System.Console;
 
 class Program
 {
@@ -17,20 +18,20 @@ class Program
             {
                 if (proc != null)
                 {
-                    Console.WriteLine("Запущен дочерний процесс. Пожалуйста, закройте приложение для продолжения...");
+                    WriteLine("Запущен дочерний процесс. Пожалуйста, закройте приложение для продолжения...");
                     proc.WaitForExit();
                     int exit = proc.ExitCode;
-                    Console.WriteLine($"Дочерний процесс завершен с кодом {exit}.");
+                    WriteLine($"Дочерний процесс завершен с кодом {exit}.");
                 }
                 else
                 {
-                    Console.WriteLine("Не удалось запустить дочерний процесс.");
+                    WriteLine("Не удалось запустить дочерний процесс.");
                 }
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Произошла ошибка: {ex.Message}");
+            WriteLine($"Произошла ошибка: {ex.Message}");
         }
     }
 }
