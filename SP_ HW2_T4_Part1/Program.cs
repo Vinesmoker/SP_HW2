@@ -13,9 +13,9 @@ namespace ParentApp
         {
             WriteLine("Enter the word to search:");
             string searchWord = ReadLine();
-            WriteLine("Do you want to select a file? (yes/no)");
+            WriteLine("Do you want to select a file? (Y/N)");
             string response = ReadLine();
-            if (response.ToLower() == "yes")
+            if (response.ToLower() == "y" && response.ToLower() == "н")
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
